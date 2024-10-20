@@ -1,0 +1,169 @@
+/* Styling for whole page */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, #01070e, #02213f, #0565c4, #047beb); /* Blue colour gradient */
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Name and title Styling */
+#header {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Move content to the right */
+    align-items: center;
+    padding-right: 50px; /* Adjust padding for spacing from the right */
+    text-align: right; /* Align text to the right */
+    background-color: #001a33;
+    background-image: url('IMG_0669.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+#header h1 {
+    font-size: 4em;
+    color: rgb(21, 24, 28);
+    margin: 0;
+}
+
+#header h3 {
+    font-size: 2em;
+    color: #0f3678;
+}
+#header h4 {
+    font-size: 5em;
+    color: #05327f;
+}
+
+/* All Sections */
+.routemap {
+    padding-top: 120px; /* Adjusting for nav height */
+    background-color: transparent; 
+}
+
+.section {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: #00264d; /* section background colours */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 1200px;
+    height: 70px; 
+    overflow: hidden;
+}
+
+.section:hover {
+    background-color: #003366; /* lighter blue colour*/
+}
+
+.section-label {
+    font-size: 2em;
+    color: #00bcd4;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Initially hiding all details */
+.details {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Expanding section when only clicked on it using :target */
+#skills:target,
+#experience:target,
+#projects:target,
+#education:target,
+#contact:target {
+    height: auto; /* Expanding to fit the content */
+}
+
+#skills:target .details,
+#experience:target .details,
+#projects:target .details,
+#education:target .details,
+#contact:target .details {
+    opacity: 1; 
+}
+
+.sub-routemap h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.sub-routemap p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #001a33; /* Darker blue colour */
+    padding: 20px;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column; /* Stack vertically */
+        padding: 20px;
+        text-align: center;
+        height: auto; /* Adjust height on mobile */
+    }
+
+    #header h1 {
+        font-size: 2.5em; /* Smaller font on mobile */
+    }
+
+    #header h3 {
+        font-size: 1.5em;
+    }
+
+    .section {
+        width: 95%; /* More width on smaller devices */
+    }
+
+    nav ul li a {
+        font-size: 1.1em; /* Smaller font for mobile navigation */
+    }
+}
