@@ -1,4 +1,4 @@
-/* Styling for whole page */
+/* General Styling */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -11,19 +11,23 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     text-align: center;
     z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 15px;
 }
 
@@ -39,55 +43,53 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
-/* Name and title Styling */
+/* Header (Intro Section) */
 #header {
     height: 100vh;
     display: flex;
-    justify-content: flex-end; /* Moving name and title to the right */
+    justify-content: flex-end; /* Align to the right */
     align-items: center;
-    padding-right: 50px; /* Adjusting padding for spacing from the right */
-    text-align: right; /* Aligning text to right */
+    padding-right: 50px;
+    text-align: right;
     background-color: #001a33;
-    background-image: url('IMG_0669.jpg'); 
+    background-image: url('IMG_0669.jpg');
     background-size: cover;
     background-position: center;
+    margin-top: 60px; /* Adding margin to prevent the nav bar */
+    position: relative;
 }
 
 #header h1 {
-    font-size: 4em;
-    color: rgb(21, 24, 28);
+    font-size: 3.5em;
+    color: rgb(33, 113, 211);
     margin: 0;
 }
 
 #header h3 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #0f3678;
 }
-#header h4 {
-    font-size: 5em;
-    color: #05327f;
-}
 
-/* All Sections */
+/* Section Styles */
 .routemap {
-    padding-top: 120px; /* Adjusting for nav height */
-    background-color: transparent; 
+    padding-top: 80px; /* Adjusting for nav height */
+    background-color: transparent;
 }
 
 .section {
     padding: 30px;
     margin: 20px auto;
-    background-color: #00264d; /* section background colours */
+    background-color: #00264d;
     border-radius: 10px;
     transition: all 0.3s ease;
     width: 90%;
     max-width: 1200px;
-    height: 70px; 
+    height: 70px;
     overflow: hidden;
 }
 
 .section:hover {
-    background-color: #003366; /* lighter blue colour*/
+    background-color: #003366;
 }
 
 .section-label {
@@ -100,19 +102,19 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-/* Initially hiding all details */
+/* Initially hide all details */
 .details {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-/* Expanding section when only clicked on it using :target */
+/* Expanding section when clicked using :target */
 #skills:target,
 #experience:target,
 #projects:target,
 #education:target,
 #contact:target {
-    height: auto; /* Expanding to fit the content */
+    height: auto;
 }
 
 #skills:target .details,
@@ -120,7 +122,7 @@ nav ul li a:hover {
 #projects:target .details,
 #education:target .details,
 #contact:target .details {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .sub-routemap h3 {
@@ -135,22 +137,25 @@ nav ul li a:hover {
 
 /* Footer Styling */
 footer {
-    background-color: #001a33; /* Darker blue colour */
+    background-color: #001a33;
     padding: 20px;
     text-align: center;
     color: #aaa;
     font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Mobile Responsiveness */
+/*For  Mobile screen */
 @media screen and (max-width: 768px) {
     #header {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column; 
         padding: 20px;
-        justify-content: center;
+        justify-content: center; /* Centering the content */
         text-align: center;
-        height: auto; /* Adjusting height on mobile */
-        background-size: contain;
+        height: auto;
+        background-size: contain; 
     }
 
     #header h1 {
@@ -162,10 +167,14 @@ footer {
     }
 
     .section {
-        width: 95%; 
+        width: 95%; /* Making sections full width on smaller devices */
     }
 
-    nav ul li a {
-        font-size: 1.1em; /* Smaller font for mobile navigation */
+    nav ul {
+        flex-direction: column; /* Stacking nav items on top of each other */
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 }
