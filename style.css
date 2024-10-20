@@ -147,14 +147,13 @@ footer {
     width: 100%;
 }
 
-/*For  Mobile screen */
+/* For Mobile screen */
 @media screen and (max-width: 768px) {
     #header {
-        flex-direction: column; 
+        flex-direction: column; /* Stack vertically */
         padding: 20px;
         text-align: center;
-        height: auto;
-        background-size: contain; 
+        height: auto; /* Adjust height on mobile */
     }
 
     #header h1 {
@@ -166,14 +165,10 @@ footer {
     }
 
     .section {
-        width: 95%; /* Making sections full width on smaller devices */
+        width: 95%; /* More width on smaller devices */
     }
 
-    nav ul {
-        flex-direction: column; /* Stacking nav items on top of each other */
-    }
-
-    nav ul li {
-        margin: 10px 0;
+    nav ul li a {
+        font-size: 1.1em; 
     }
 }
