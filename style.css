@@ -152,7 +152,6 @@ footer {
     #header {
         flex-direction: column; 
         padding: 20px;
-        justify-content: center; /* Centering the content */
         text-align: center;
         height: auto;
         background-size: contain; 
