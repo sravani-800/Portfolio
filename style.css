@@ -43,10 +43,10 @@ nav ul li a:hover {
 #header {
     height: 100vh;
     display: flex;
-    justify-content: flex-end; /* Move content to the right */
+    justify-content: flex-end; /* Moving name and title to the right */
     align-items: center;
-    padding-right: 50px; /* Adjust padding for spacing from the right */
-    text-align: right; /* Align text to the right */
+    padding-right: 50px; /* Adjusting padding for spacing from the right */
+    text-align: right; /* Aligning text to right */
     background-color: #001a33;
     background-image: url('IMG_0669.jpg'); 
     background-size: cover;
@@ -148,22 +148,22 @@ footer {
         flex-direction: column; /* Stack vertically */
         padding: 20px;
         text-align: center;
-        height: auto; /* Adjust height on mobile */
+        height: auto; /* Adjusting height on mobile */
     }
 
     #header h1 {
-        font-size: 2.5em; /* Smaller font on mobile */
+        font-size: 2.0em; /* Smaller font on mobile */
     }
 
     #header h3 {
-        font-size: 1.5em;
+        font-size: 1.0em;
     }
 
     .section {
-        width: 95%; /* More width on smaller devices */
+        width: 90%; 
     }
 
     nav ul li a {
-        font-size: 1.1em; /* Smaller font for mobile navigation */
+        font-size: 1.0em; /* Smaller font for mobile navigation */
     }
 }
